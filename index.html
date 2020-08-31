@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eric Karugu | Software Developer</title>
+    <meta name="title" content="Eric Karugu - A Software Engineer" />
+    <meta name="description" content="Eric Karugu is a software developer based in Kenya, who focuses in creating solutions around the web from websites, webapps to native mobile apps" />
+    <meta name="keywords" , content="Eric Karugu, Dev Eric, Eric, Karugu, Software Enginner, Front End Developer, Web Engineer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://erickarugu.com/" />
+    <meta property="og:title" content="Eric Karugu - A Software Engineer" />
+    <meta property="og:description" content="Eric Karugu is a software developer based in Kenya, who focuses in creating solutions around the web from websites, webapps to native mobile apps" />
+    <meta property="og:image" content="/images/og-image.png" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://erickarugu.com/" />
+    <meta property="twitter:title" content="The best GitHub stats summarizer/visualizer" />
+    <meta property="twitter:description" content="Eric Karugu is a software developer based in Kenya, who focuses in creating solutions around the web from websites, webapps to native mobile apps" />
+    <meta property="twitter:image" content="/images/twitter-image.png" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./dist/styles.css" />
+  </head>
+  <body class="dark">
+    <!-- 1. Vertical socials linkes -->
+    <div class="socials flex flex-col">
+      <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="#" title="TWitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" title="Dev.to"><i class="fab fa-dev"></i></a>
+    </div>
+
+    <!-- header section -->
+    <header>
+      <nav class="navbar flex al-c jc-sb">
+        <a href="#" class="navbar__brand" title="Eric Karugu Logo">
+          <img src="./assets/images/logo.png" alt="Eric Karugu Logo" />
+        </a>
+
+        <div class="navbar__hamburger flex flex-col jc-c hide-for-desktop">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- Theme toggler -->
+        <div class="theme__toggler hide-for-mobile" id="theme__toggler"><i class="fa fa-sun"></i></div>
+
+        <!-- Navigation in large screen devices -->
+        <ul class="navbar__nav navbar__desktop flex jc-c al-c hide-for-mobile">
+          <li class="navbar__item flex flex-row">
+            <i class="fa fa-user"></i>
+            <a href="#Me" title="About Me">About Me</a>
+          </li>
+          <li class="navbar__item flex flex-row">
+            <i class="fa fa-briefcase"></i>
+            <a href="#Work" title="Experience">Experience</a>
+          </li>
+          <li class="navbar__item flex flex-row">
+            <i class="fa fa-tasks"></i>
+            <a href="#Projects" title="Projects">Projects</a>
+          </li>
+
+          <li class="navbar__item flex flex-row">
+            <i class="fa fa-users"></i>
+            <a href="#Contact" title="Contacts">Connect</a>
+          </li>
+          <a href="./resume.pdf" class="resume flex al-c jc-c btn btn-primary" title="View my CV">Resume</a>
+        </ul>
+
+        <!-- Navigation in mobile devices -->
+        <div class="navbar__nav navbar__mobile flex flex-col al-c jc-sa hide-for-desktop closed" id="navbar__mobile">
+          <div class="close" id="close__aside"><i class="fa fa-2x fa-times"></i></div>
+          <a href="#Me" class="flex flex-col al-c" title="About Me"><i class="fa fa-user"></i>About Me</a>
+          <a href="#Work" class="flex flex-col al-c" title="Work"><i class="fa fa-briefcase"></i>Experience</a>
+          <a href="#Projects" class="flex flex-col al-c" title="Projects"><i class="fa fa-tasks"></i>Projects</a>
+          <a href="#Contact" class="flex flex-col al-c" title="Contact"><i class="fa fa-envelope"></i>Contact</a>
+          <a href="./resume.pdf" class="resume flex jc-c al-c btn btn-primary" title="View my CV">Resume</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- The main -->
+    <main>
+      <!-- Top hero section -->
+      <section class="hero__section flex flex-row al-c">
+        <!-- 2. The intro section -->
+        <div class="intro flex flex-col jc-c">
+          <h1>👋 Hi there, my name is</h1>
+          <h2 class="name">Eric Karugu.</h2>
+          <h2 class="description">I'm a Web Developer.</h2>
+          <p>I am currently based in Nairobi, Kenya specializing in building websites, web apps, native apps and everything else relating to the web.</p>
+          <a href="./resume.pdf" class="resume flex jc-c al-c btn btn-primary" title="View my CV">Reach Out</a>
+        </div>
+        <!-- 3. The laptop section -->
+        <div class="image-section">
+          <img class="img" src="./assets/images/laptop_image.png" alt="Developer laptop" />
+        </div>
+      </section>
+
+      <!-- About me section -->
+      <section class="about__section flex flex-col jc-sa al-c">
+        <div class="description flex flex-col al-c jc-sa">
+          <div class="head flex al-c">
+            <a href="#" name="Me">
+              <h2 class="flex"><i class="fa fa-user"></i> About</h2>
+            </a>
+            <div class="horizontal-line" id="horizontal-line"></div>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum doloremque praesentium quod tenetur modi natus perspiciatis et molestiae consectetur dicta nesciunt vero assumenda, necessitatibus minus iure voluptas temporibus fuga voluptate.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum doloremque praesentium quod tenetur modi natus perspiciatis et molestiae consectetur dicta nesciunt vero assumenda, necessitatibus minus iure voluptas temporibus fuga voluptate.</p>
+          <div class="list flex jc-se">
+            <ul>
+              <li>Modern Javascript</li>
+              <li>Angular</li>
+              <li>TypeScript</li>
+              <li>Node.js</li>
+            </ul>
+            <ul>
+              <li>HTML and CSS</li>
+              <li>Wordpress</li>
+              <li>AWS, Azure</li>
+              <li>Firebase</li>
+            </ul>
+          </div>
+        </div>
+        <div class="about__image">
+          <div class="overlay" id="overlay"></div>
+          <img class="img" src="./assets/images/eric.jpg" alt="Eric Karugu Portrait" />
+        </div>
+      </section>
+
+      <!-- The Experience section -->
+      <section class="experience__section">
+        <div class="content">
+          <div class="head flex al-c">
+            <a href="#" name="Me">
+              <h2 class="flex"><i class="fa fa-briefcase"></i> Work</h2>
+            </a>
+            <div class="horizontal-line" id="horizontal-line"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="flex flex-col jc-c al-c">
+      <p>Designed and Developed by Eric Karugu</p>
+      <p>&copy; 2020</p>
+    </footer>
+
+    <script src="./app/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+.hero__section {
+  height: 90vh;
+  // border: 1px solid red;
+
+  @include breakpoint-up(medium) {
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+
+    > * {
+      // border: 1px solid red;
+      min-width: 45%;
+      padding: 20px;
+    }
+  }
+
+  h1 {
+    color: $primaryGreen;
+  }
+  h2,
+  p {
+    margin-bottom: 10px;
+  }
+
+  .intro {
+    height: 100%;
+    width: 100%;
+    padding: 0.625rem;
+    margin: 0;
+
+    @include breakpoint-up(xlarge) {
+      h2 {
+        font-size: 6.25rem;
+
+        &.description {
+          font-size: 3.75rem;
+        }
+      }
+      p {
+        max-width: 31.25rem;
+      }
+    }
+
+    @include breakpoint-down(large) {
+      h2 {
+        font-size: 3.125rem;
+
+        &.description {
+          font-size: 2.5rem;
+        }
+      }
+      *:not(:last-child) {
+        margin-bottom: 1.25rem;
+        max-width: 31.25rem;
+      }
+    }
+  }
+
+  .image-section {
+    @include breakpoint-down(small) {
+      display: none;
+    }
+  }
+}
