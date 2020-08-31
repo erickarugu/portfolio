@@ -1,0 +1,52 @@
+.connect__section {
+  margin: 50px auto;
+
+  > * {
+    padding: 10px;
+  }
+  @include breakpoint-up(medium) {
+    width: 90%;
+    margin: 200px auto;
+    flex-direction: row !important;
+
+    > * {
+      padding: 20px;
+      width: 60%;
+      margin: auto;
+    }
+  }
+
+  .content {
+    .head {
+      width: 100%;
+      a {
+        margin: 10px 0;
+      }
+      .fa {
+        margin-right: 10px;
+      }
+    }
+    .content__body {
+      p {
+        text-align: center;
+      }
+      .form {
+        width: 90%;
+        margin: 20px auto;
+
+        .form-input {
+          margin: 15px auto;
+        }
+      }
+    }
+  }
+  .social__links {
+    a {
+      transition: color 300ms ease-in-out;
+
+      &:hover {
+        color: $primaryGreen;
+      }
+    }
+  }
+}

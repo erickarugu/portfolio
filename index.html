@@ -30,19 +30,21 @@
   <body class="dark">
     <!-- 1. Vertical socials linkes -->
     <div class="socials flex flex-col">
-      <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
-      <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="#" title="TWitter"><i class="fab fa-twitter"></i></a>
-      <a href="#" title="Dev.to"><i class="fab fa-dev"></i></a>
+      <a href="https://github.com/erickarugu32" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/eric-karugu-904569145/" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://twitter.com/karugu_eric" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://dev.to/erickarugu" title="Dev.to" target="_blank"><i class="fab fa-dev"></i></a>
     </div>
 
     <!-- header section -->
     <header>
+      <!-- Nav -->
       <nav class="navbar flex al-c jc-sb">
         <a href="#" class="navbar__brand" title="Eric Karugu Logo">
           <img src="./assets/images/logo.png" alt="Eric Karugu Logo" />
         </a>
 
+        <!-- Mobile hamburger -->
         <div class="navbar__hamburger flex flex-col jc-c hide-for-desktop">
           <span></span>
           <span></span>
@@ -50,9 +52,9 @@
         </div>
 
         <!-- Theme toggler -->
-        <div class="theme__toggler hide-for-mobile" id="theme__toggler"><i class="fa fa-sun"></i></div>
+        <div class="theme__toggler" id="theme__toggler"><i class="fa fa-sun"></i></div>
 
-        <!-- Navigation in large screen devices -->
+        <!-- Navbar in large screen devices -->
         <ul class="navbar__nav navbar__desktop flex jc-c al-c hide-for-mobile">
           <li class="navbar__item flex flex-row">
             <i class="fa fa-user"></i>
@@ -60,13 +62,12 @@
           </li>
           <li class="navbar__item flex flex-row">
             <i class="fa fa-briefcase"></i>
-            <a href="#Work" title="Experience">Experience</a>
+            <a href="#Experience" title="Experience">Experience</a>
           </li>
           <li class="navbar__item flex flex-row">
             <i class="fa fa-tasks"></i>
             <a href="#Projects" title="Projects">Projects</a>
           </li>
-
           <li class="navbar__item flex flex-row">
             <i class="fa fa-users"></i>
             <a href="#Contact" title="Contacts">Connect</a>
@@ -74,17 +75,18 @@
           <a href="./resume.pdf" class="resume flex al-c jc-c btn btn-primary" title="View my CV">Resume</a>
         </ul>
 
-        <!-- Navigation in mobile devices -->
+        <!-- Side navbar in mobile devices -->
         <div class="navbar__nav navbar__mobile flex flex-col al-c jc-sa hide-for-desktop closed" id="navbar__mobile">
           <div class="close" id="close__aside"><i class="fa fa-2x fa-times"></i></div>
           <a href="#Me" class="flex flex-col al-c" title="About Me"><i class="fa fa-user"></i>About Me</a>
-          <a href="#Work" class="flex flex-col al-c" title="Work"><i class="fa fa-briefcase"></i>Experience</a>
+          <a href="#Experience" class="flex flex-col al-c" title="Work"><i class="fa fa-briefcase"></i>Experience</a>
           <a href="#Projects" class="flex flex-col al-c" title="Projects"><i class="fa fa-tasks"></i>Projects</a>
           <a href="#Contact" class="flex flex-col al-c" title="Contact"><i class="fa fa-envelope"></i>Contact</a>
           <a href="./resume.pdf" class="resume flex jc-c al-c btn btn-primary" title="View my CV">Resume</a>
         </div>
       </nav>
     </header>
+    <!-- End of header -->
 
     <!-- The main -->
     <main>
@@ -96,7 +98,7 @@
           <h2 class="name">Eric Karugu.</h2>
           <h2 class="description">I'm a Web Developer.</h2>
           <p>I am currently based in Nairobi, Kenya specializing in building websites, web apps, native apps and everything else relating to the web.</p>
-          <a href="./resume.pdf" class="resume flex jc-c al-c btn btn-primary" title="View my CV">Reach Out</a>
+          <a href="#Connect" class="resume flex jc-c al-c btn btn-primary" title="View my CV">Reach Out</a>
         </div>
         <!-- 3. The laptop section -->
         <div class="image-section">
@@ -140,11 +142,56 @@
       <section class="experience__section">
         <div class="content">
           <div class="head flex al-c">
-            <a href="#" name="Me">
+            <a href="#" name="Experience">
               <h2 class="flex"><i class="fa fa-briefcase"></i> Work</h2>
             </a>
             <div class="horizontal-line" id="horizontal-line"></div>
           </div>
+        </div>
+      </section>
+      <!-- The Projects section -->
+      <section class="projects__section">
+        <div class="content">
+          <div class="head flex al-c">
+            <a href="#" name="Projects">
+              <h2 class="flex"><i class="fa fa-tasks"></i> Projects</h2>
+            </a>
+            <div class="horizontal-line" id="horizontal-line"></div>
+          </div>
+        </div>
+      </section>
+      <!-- The Connect section -->
+      <section class="connect__section">
+        <div class="content">
+          <div class="head flex al-c jc-c">
+            <a name="Connect">
+              <h2 class="flex"><i class="fa fa-users"></i> Connect</h2>
+            </a>
+          </div>
+          <div class="content__body">
+            <p>I am always willing to expand my network, collaborate, learn from other people like you and help those I can. Please feel free to leave me a comment/request/question down here or reach out through social media. I try my best to respond within 24hrs.</p>
+            <form class="form" method="POST" data-netlify="true">
+              <div class="form-input flex flex-col">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required />
+              </div>
+              <div class="form-input flex flex-col">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required />
+              </div>
+              <div class="form-input flex flex-col">
+                <label for="comment">Comment:</label>
+                <textarea name="comment" id="comment" cols="30" rows="10" maxlength="500"></textarea>
+              </div>
+              <button class="btn btn-primary" type="submit" role="button">Send <i class="fa fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+        <div class="social__links flex jc-sa">
+          <a href="https://github.com/erickarugu32" title="GitHub"><i class="fab fa-2x fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/eric-karugu-904569145/" title="LinkedIn" target="_blank"><i class="fab fa-2x fa-linkedin"></i></a>
+          <a href="https://twitter.com/karugu_eric" title="Twitter" target="_blank"><i class="fab fa-2x fa-twitter"></i></a>
+          <a href="https://dev.to/erickarugu" title="Dev.to" target="_blank"><i class="fab fa-2x fa-dev"></i></a>
         </div>
       </section>
     </main>

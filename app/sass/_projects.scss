@@ -1,0 +1,40 @@
+.projects__section {
+  margin: 50px auto;
+  border: 1px solid red;
+  > * {
+    padding: 10px;
+    border: 1px solid red;
+  }
+  @include breakpoint-up(medium) {
+    width: 90%;
+    margin: 200px auto;
+    flex-direction: row !important;
+
+    > * {
+      padding: 20px;
+      margin: auto;
+    }
+  }
+
+  .content {
+    .head {
+      width: 100%;
+      margin: auto;
+      border: 1px solid red;
+
+      a {
+        margin: 10px 0;
+      }
+      .fa {
+        margin-right: 10px;
+      }
+      .horizontal-line {
+        width: 40%;
+        height: 2px;
+        margin-left: 10px;
+        opacity: 0.7;
+        border: 1px solid $primaryGray;
+      }
+    }
+  }
+}

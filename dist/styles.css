@@ -129,8 +129,37 @@ button,
 button:active,
 button:focus,
 input:focus,
-input:active {
+input:active,
+textarea:active,
+textarea:focus {
   outline: none;
+}
+
+input {
+  height: 40px;
+}
+
+input,
+textarea {
+  margin: 0;
+  background: transparent;
+  border: 1px solid #7ee081;
+  border-radius: 5px;
+  -webkit-transition: all 30ms ease-in-out;
+  transition: all 30ms ease-in-out;
+}
+
+textarea {
+  resize: none;
+}
+
+input:focus,
+textarea:focus,
+input:active,
+textarea:active {
+  background: honeydew;
+  -webkit-box-shadow: 0rem 0rem 0.1rem 0.1rem rgba(0, 0, 0, 0.6);
+          box-shadow: 0rem 0rem 0.1rem 0.1rem rgba(0, 0, 0, 0.6);
 }
 
 select:active,
@@ -147,6 +176,18 @@ p {
   opacity: 0.7;
   font-size: 1.25rem;
   margin: 10px 0;
+}
+
+ul {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+
+.text__highlight,
+h1 {
+  color: #7ee081;
 }
 
 .img {
@@ -279,12 +320,12 @@ body.light #overlay {
 }
 
 .btn {
-  width: 10rem;
-  height: 3.5rem;
+  width: 7rem;
+  height: 2.5rem;
   font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+  font-size: 1rem;
   background: transparent;
   cursor: pointer;
-  font-size: 1.125rem;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
@@ -369,7 +410,7 @@ body.light #overlay {
 .navbar__hamburger span {
   width: 1.5625rem;
   margin: 0.125rem 0rem;
-  border: 0.0625rem solid white;
+  border: 0.0625rem solid #7ee081;
 }
 
 .navbar__hamburger span:nth-child(2) {
@@ -387,7 +428,14 @@ body.light #overlay {
   top: 1.25rem;
   right: 1.25rem;
   cursor: pointer;
-  z-index: 10;
+  z-index: 1;
+}
+
+@media (max-width: 63.9375rem) {
+  .navbar .theme__toggler {
+    top: 40%;
+    right: 20%;
+  }
 }
 
 .navbar__nav a {
@@ -419,12 +467,6 @@ body.light #overlay {
   margin-right: 0.625rem;
 }
 
-.navbar__desktop .btn {
-  width: 7rem;
-  height: 2.5rem;
-  font-size: 1rem;
-}
-
 .navbar__mobile {
   position: fixed;
   top: 0;
@@ -436,7 +478,7 @@ body.light #overlay {
   background: #172a45;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
-  z-index: 1;
+  z-index: 2;
 }
 
 .navbar__mobile.closed {
@@ -502,6 +544,10 @@ body.light #overlay {
   height: 90vh;
 }
 
+.hero__section > * {
+  padding: 10px;
+}
+
 @media (min-width: 40rem) {
   .hero__section {
     width: 90%;
@@ -512,15 +558,6 @@ body.light #overlay {
     min-width: 45%;
     padding: 20px;
   }
-}
-
-.hero__section h1 {
-  color: #7ee081;
-}
-
-.hero__section h2,
-.hero__section p {
-  margin-bottom: 10px;
 }
 
 .hero__section .intro {
@@ -550,7 +587,7 @@ body.light #overlay {
     font-size: 2.5rem;
   }
   .hero__section .intro *:not(:last-child) {
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.5rem;
     max-width: 31.25rem;
   }
 }
@@ -559,6 +596,10 @@ body.light #overlay {
   .hero__section .image-section {
     display: none;
   }
+}
+
+.about__section {
+  margin: 50px auto;
 }
 
 .about__section > * {
@@ -575,7 +616,7 @@ body.light #overlay {
             flex-direction: row !important;
   }
   .about__section > * {
-    width: 45%;
+    max-width: 45%;
     padding: 20px;
   }
 }
@@ -605,11 +646,17 @@ body.light #overlay {
 }
 
 .about__section .description .list ul li {
-  list-style: square;
+  list-style: url(./../../assets/images/code.png);
 }
 
 .about__section .about__image {
   position: relative;
+}
+
+@media (max-width: 63.9375rem) {
+  .about__section .about__image {
+    width: 95%;
+  }
 }
 
 .about__section .about__image:hover .overlay {
@@ -617,14 +664,14 @@ body.light #overlay {
 }
 
 .about__section .about__image .overlay {
-  border-radius: 5px;
   position: absolute;
-  height: 100%;
   width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.3);
   border: 1px dotted #7ee081;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.3);
   -webkit-transition: background 300ms ease-in-out;
   transition: background 300ms ease-in-out;
 }
@@ -669,8 +716,114 @@ body.light #overlay {
   border: 1px solid honeydew;
 }
 
+.projects__section {
+  margin: 50px auto;
+  border: 1px solid red;
+}
+
+.projects__section > * {
+  padding: 10px;
+  border: 1px solid red;
+}
+
+@media (min-width: 40rem) {
+  .projects__section {
+    width: 90%;
+    margin: 200px auto;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
+  .projects__section > * {
+    padding: 20px;
+    margin: auto;
+  }
+}
+
+.projects__section .content .head {
+  width: 100%;
+  margin: auto;
+  border: 1px solid red;
+}
+
+.projects__section .content .head a {
+  margin: 10px 0;
+}
+
+.projects__section .content .head .fa {
+  margin-right: 10px;
+}
+
+.projects__section .content .head .horizontal-line {
+  width: 40%;
+  height: 2px;
+  margin-left: 10px;
+  opacity: 0.7;
+  border: 1px solid honeydew;
+}
+
+.connect__section {
+  margin: 50px auto;
+}
+
+.connect__section > * {
+  padding: 10px;
+}
+
+@media (min-width: 40rem) {
+  .connect__section {
+    width: 90%;
+    margin: 200px auto;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
+  .connect__section > * {
+    padding: 20px;
+    width: 60%;
+    margin: auto;
+  }
+}
+
+.connect__section .content .head {
+  width: 100%;
+}
+
+.connect__section .content .head a {
+  margin: 10px 0;
+}
+
+.connect__section .content .head .fa {
+  margin-right: 10px;
+}
+
+.connect__section .content .content__body p {
+  text-align: center;
+}
+
+.connect__section .content .content__body .form {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.connect__section .content .content__body .form .form-input {
+  margin: 15px auto;
+}
+
+.connect__section .social__links a {
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
+}
+
+.connect__section .social__links a:hover {
+  color: #7ee081;
+}
+
 footer {
   height: 6.25rem;
   text-align: center;
+  border-top: 1px solid #7ee081;
 }
 /*# sourceMappingURL=styles.css.map */

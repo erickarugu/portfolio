@@ -1,8 +1,8 @@
 .about__section {
-  // border: 1px solid red;
+  margin: 50px auto;
+
   > * {
     padding: 10px;
-    // border: 1px solid red;
   }
   @include breakpoint-up(medium) {
     width: 90%;
@@ -10,7 +10,7 @@
     flex-direction: row !important;
 
     > * {
-      width: 45%;
+      max-width: 45%;
       padding: 20px;
     }
   }
@@ -36,14 +36,16 @@
     .list {
       width: 90%;
       ul li {
-        list-style: square;
+        list-style: url(./../../assets/images/code.png);
       }
     }
   }
 
   .about__image {
     position: relative;
-    // border: 1px solid red;
+    @include breakpoint-down(medium) {
+      width: 95%;
+    }
 
     &:hover {
       .overlay {
@@ -52,14 +54,14 @@
     }
 
     .overlay {
-      border-radius: 5px;
       position: absolute;
-      height: 100%;
       width: 100%;
+      height: 100%;
       top: 0;
       left: 0;
-      background: rgba(0, 0, 0, 0.3);
       border: 1px dotted $primaryGreen;
+      border-radius: 5px;
+      background: rgba(0, 0, 0, 0.3);
       transition: background 300ms ease-in-out;
     }
   }

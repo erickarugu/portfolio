@@ -1,6 +1,9 @@
 .hero__section {
   height: 90vh;
-  // border: 1px solid red;
+
+  > * {
+    padding: 10px;
+  }
 
   @include breakpoint-up(medium) {
     width: 90%;
@@ -8,18 +11,9 @@
     padding: 10px;
 
     > * {
-      // border: 1px solid red;
       min-width: 45%;
       padding: 20px;
     }
-  }
-
-  h1 {
-    color: $primaryGreen;
-  }
-  h2,
-  p {
-    margin-bottom: 10px;
   }
 
   .intro {
@@ -50,7 +44,7 @@
         }
       }
       *:not(:last-child) {
-        margin-bottom: 1.25rem;
+        margin-bottom: 0.5rem;
         max-width: 31.25rem;
       }
     }
