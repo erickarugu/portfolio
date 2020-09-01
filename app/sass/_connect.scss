@@ -11,6 +11,13 @@
 
     > * {
       padding: 20px;
+      width: 90%;
+      margin: auto;
+    }
+  }
+  @include breakpoint-up(large) {
+    > * {
+      padding: 20px;
       width: 60%;
       margin: auto;
     }

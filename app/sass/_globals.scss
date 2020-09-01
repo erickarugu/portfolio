@@ -47,7 +47,7 @@ input:focus,
 textarea:focus,
 input:active,
 textarea:active {
-  background: $primaryGray;
+  border: 1px solid $primaryGreen;
   box-shadow: 0rem 0rem 0.1rem 0.1rem rgba(0, 0, 0, 0.6);
 }
 select:active,
@@ -102,6 +102,12 @@ body {
   &.dark {
     color: $primaryGray;
     background: $primaryDark;
+
+    input,
+    textarea {
+      color: $primaryGray;
+      border: 1px solid $primaryWhite;
+    }
   }
 
   // 2. The light theme
@@ -118,6 +124,10 @@ body {
     }
     #overlay {
       background: transparent;
+    }
+    input,
+    textarea {
+      border: 1px solid $primaryDark;
     }
   }
 }
