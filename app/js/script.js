@@ -26,4 +26,9 @@ window.onload = () => {
   navbarHamburger.addEventListener("click", (e) => {
     aside.classList.remove("closed");
   });
+
+  if ("serviceWorker" in navigator) {
+    // register service worker
+    navigator.serviceWorker.register("/service-worker.js");
+  }
 };
