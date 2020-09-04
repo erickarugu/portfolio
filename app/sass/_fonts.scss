@@ -4,6 +4,7 @@
   src: url(/assets/fonts/calibre/Calibre-Light.woff2) format("woff2"), url(/assets/fonts/calibre/Calibre-Light.woff) format("woff"), url(/assets/fonts/calibre/Calibre-Light.ttf) format("truetype");
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -11,6 +12,7 @@
   src: url(/assets/fonts/calibre/Calibre-LightItalic.woff2) format("woff2"), url(/assets/fonts/calibre/Calibre-LightItalic.woff) format("woff"), url(/assets/fonts/calibre/Calibre-LightItalic.ttf) format("truetype");
   font-weight: 300;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -18,6 +20,7 @@
   src: url(/assets/fonts/calibre/Calibre-Regular.woff2) format("woff2"), url(/assets/fonts/calibre/Calibre-Regular.woff) format("woff"), url(/assets/fonts/calibre/Calibre-Regular.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -25,6 +28,7 @@
   src: url(/assets/fonts/calibre/Calibre-RegularItalic.woff2) format("woff2"), url(/assets/fonts/calibre/Calibre-RegularItalic.woff) format("woff"), url(/assets/fonts/calibre/Calibre-RegularItalic.ttf) format("truetype");
   font-weight: normal;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -32,6 +36,7 @@
   src: url(/assets/fonts/calibre/Calibre-Medium.woff2) format("woff2"), url(/assets/fonts/calibre/Calibre-Medium.woff) format("woff"), url(/assets/fonts/calibre/Calibre-Medium.ttf) format("truetype");
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -39,6 +44,7 @@
   src: url(/assets/fonts/calibre/Calibre-MediumItalic.woff2) format("woff2"), url(/assets/fonts/calibre/Calibre-MediumItalic.woff) format("woff"), url(/assets/fonts/calibre/Calibre-MediumItalic.ttf) format("truetype");
   font-weight: 500;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -46,6 +52,7 @@
   src: url(/assets/fonts/calibre/Calibre-Semibold.woff2) format("woff2"), url(/assets/fonts/calibre/Calibre-Semibold.woff) format("woff"), url(/assets/fonts/calibre/Calibre-Semibold.ttf) format("truetype");
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -53,6 +60,7 @@
   src: url(/assets/fonts/calibre/Calibre-SemiboldItalic.woff2) format("woff2"), url(/assets/fonts/calibre/Calibre-SemiboldItalic.woff) format("woff"), url(/assets/fonts/calibre/Calibre-SemiboldItalic.ttf) format("truetype");
   font-weight: 600;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -60,6 +68,7 @@
   src: url(/assets/fonts/sf-mono/SFMonoRegular.woff) format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -67,6 +76,7 @@
   src: url(/assets/fonts/sf-mono/SFMonoRegularItalic.woff) format("woff");
   font-weight: normal;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -74,6 +84,7 @@
   src: url(/assets/fonts/sf-mono/SFMonoMedium.woff) format("woff");
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -81,6 +92,7 @@
   src: url(/assets/fonts/sf-mono/SFMonoMediumItalic.woff) format("woff");
   font-weight: 500;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -88,6 +100,7 @@
   src: url(/assets/fonts/sf-mono/SFMonoSemibold.woff) format("woff");
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -95,4 +108,5 @@
   src: url(/assets/fonts/sf-mono/SFMonoSemiboldItalic.woff) format("woff");
   font-weight: 600;
   font-style: italic;
+  font-display: swap;
 }
