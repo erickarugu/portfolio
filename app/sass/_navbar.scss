@@ -1,15 +1,18 @@
 .navbar {
   position: relative;
-  width: 100%;
+  width: 100%; 
   height: 10vh;
   font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
   box-shadow: rgba(2, 12, 27, 0.7) 0rem 0.625rem 1.875rem -0.625rem;
 
   &__brand {
     margin-left: 5%;
-
+    color: $primaryGreen;
+    
     img {
       height: 2.5rem;
+      border-radius: 50%;
+      margin-right: .5rem;
     }
   }
 

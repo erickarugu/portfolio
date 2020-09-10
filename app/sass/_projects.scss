@@ -1,14 +1,16 @@
-.projects__section {
-  margin: 50px auto;
-  border: 1px solid red;
+.projects {
+  margin: 50px auto 0px;
+  // border: 1px solid red;
   > * {
     padding: 10px;
-    border: 1px solid red;
+    // border: 1px solid red;
   }
   @include breakpoint-up(medium) {
     width: 90%;
-    margin: 200px auto;
+    margin: 200px auto 0px;
     flex-direction: row !important;
+          // border: 1px solid red;
+
 
     > * {
       padding: 20px;
@@ -17,10 +19,12 @@
   }
 
   .content {
+    position: relative;
+
     .head {
       width: 100%;
-      margin: auto;
-      border: 1px solid red;
+      margin: 0px auto 40px;
+      // border: 1px solid red;
 
       a {
         margin: 10px 0;
@@ -28,12 +32,82 @@
       .fa {
         margin-right: 10px;
       }
+
       .horizontal-line {
-        width: 40%;
+        width: 30%;
         height: 2px;
         margin-left: 10px;
         opacity: 0.7;
         border: 1px solid $primaryGray;
+      }
+    }
+    &__body {
+      // border: 1px solid red;
+      margin: 50px auto;
+      p {
+        color: $primaryWhite;
+        z-index: 2;
+      }
+
+      @include breakpoint-up(medium) {
+        p {
+          // border: 1px solid red;
+          padding: 10px;
+          background: $lightDark;
+          border-radius: 5px;
+        }
+        p.first,
+        p.third {
+          margin-left: -100px;
+        }
+        p.second {
+          margin-right: -100px;
+        }
+      }
+      @include breakpoint-down(small) {
+        border-radius: 5px;
+        padding: 10px;
+        color: $primaryWhite;
+        background-image: url(./../../assets/images/gitostats_screenshot.png);
+        background-color: rgba(0, 0, 0, 0.7);
+        background-blend-mode: overlay;
+        background-position: center;
+        background-size: cover;
+      }
+
+      h3 {
+        color: $primaryGreen;
+        font-size: 20px;
+      }
+      h4 {
+        font-size: 25px;
+      }
+      a {
+        margin: auto 10px;
+      }
+
+      &--image img {
+        // border: 1px solid red;
+        opacity: 0.5;
+        border-radius: 5px;
+        transition: opacity 300ms ease-in-out;
+
+        &:hover{
+          opacity: 1;
+        }
+      }
+      &--description {
+        align-self: stretch;
+        // border: 1px solid red;
+        width: 90%;
+        min-width: 250px;
+        
+        >*{
+          margin-bottom: 15px;
+        }
+        .links{
+          margin-top: 20px;
+        }
       }
     }
   }

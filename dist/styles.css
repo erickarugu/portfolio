@@ -139,6 +139,15 @@ a:focus {
   text-decoration: none;
 }
 
+a {
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
+}
+
+a:hover {
+  color: #7ee081;
+}
+
 button,
 button:active,
 button:focus,
@@ -171,7 +180,7 @@ input:focus,
 textarea:focus,
 input:active,
 textarea:active {
-  border: 1px solid #7ee081;
+  border: 1px solid #172a45;
   -webkit-box-shadow: 0rem 0rem 0.1rem 0.1rem rgba(0, 0, 0, 0.6);
           box-shadow: 0rem 0rem 0.1rem 0.1rem rgba(0, 0, 0, 0.6);
 }
@@ -182,7 +191,7 @@ select:focus {
   outline: none;
 }
 
-i.fa {
+i.fa:not(.fa-external-link-alt) {
   color: #7ee081;
 }
 
@@ -206,7 +215,7 @@ h1 {
 
 .img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 body {
@@ -248,7 +257,7 @@ body.dark {
 body.dark input,
 body.dark textarea {
   color: honeydew;
-  border: 1px solid white;
+  border: 1px solid #172a45;
 }
 
 body.light {
@@ -326,14 +335,36 @@ body.light textarea {
           justify-content: space-evenly;
 }
 
+.flex.jc-end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .flex.al-c {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
+.flex .al-sf-end {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.flex .al-sf-start {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
 @media (max-width: 63.9375rem) {
   .hide-for-mobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 39.9375rem) {
+  .hide-for-small {
     display: none !important;
   }
 }
@@ -407,7 +438,7 @@ body.light textarea {
 
 .email {
   right: 0;
-  margin: 0;
+  margin-right: -2.5rem;
   margin-bottom: 80px;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
@@ -424,10 +455,13 @@ body.light textarea {
 
 .navbar__brand {
   margin-left: 5%;
+  color: #7ee081;
 }
 
 .navbar__brand img {
   height: 2.5rem;
+  border-radius: 50%;
+  margin-right: .5rem;
 }
 
 .navbar__hamburger {
@@ -714,12 +748,12 @@ body.light textarea {
   transition: background 300ms ease-in-out;
 }
 
-.experience__section > * {
+.experience > * {
   padding: 10px;
 }
 
 @media (min-width: 40rem) {
-  .experience__section {
+  .experience {
     width: 90%;
     margin: 200px auto;
     -webkit-box-orient: horizontal !important;
@@ -727,78 +761,308 @@ body.light textarea {
         -ms-flex-direction: row !important;
             flex-direction: row !important;
   }
-  .experience__section > * {
+  .experience > * {
     padding: 20px;
-    width: 60%;
+    width: 85%;
     margin: auto;
   }
 }
 
-.experience__section .content .head {
+@media (min-width: 64rem) {
+  .experience > * {
+    width: 65%;
+  }
+}
+
+.experience__content--head {
   width: 100%;
 }
 
-.experience__section .content .head a {
+.experience__content--head a {
   margin: 10px 0;
 }
 
-.experience__section .content .head .fa {
+.experience__content--head .fa {
   margin-right: 10px;
 }
 
-.experience__section .content .head .horizontal-line {
+.experience__content--head .horizontal-line {
   width: 60%;
   height: 2px;
   margin-left: 10px;
-  opacity: 0.7;
+  opacity: 0.5;
   border: 1px solid honeydew;
 }
 
-.projects__section {
-  margin: 50px auto;
-  border: 1px solid red;
+@media (max-width: 63.9375rem) {
+  .experience__content--body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .experience__content--body .nav ul li {
+    display: inline-block;
+    border-bottom: 2px solid #172a45;
+  }
+  .experience__content--body .nav ul li.active {
+    border-bottom: 2px solid #7ee081;
+  }
 }
 
-.projects__section > * {
+@media (min-width: 64rem) {
+  .experience__content--body .nav ul li {
+    border: none;
+    border-left: 2px solid #172a45;
+    border-bottom: 2px solid #172a45;
+  }
+  .experience__content--body .nav ul li.active {
+    border-left: 2px solid #7ee081;
+  }
+}
+
+.experience__content--body > * {
   padding: 10px;
-  border: 1px solid red;
+}
+
+.experience__content--body .nav ul li {
+  padding: 10px;
+  opacity: 0.7;
+  cursor: pointer;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.experience__content--body .nav ul li:hover {
+  opacity: 1;
+  background: #172a45;
+}
+
+.experience__content--body .nav ul li.active {
+  color: #7ee081;
+  opacity: 1;
+  background: #172a45;
+}
+
+.experience__content--body .description {
+  padding-left: 20px;
+  display: none;
+}
+
+.experience__content--body .description#CRA {
+  display: block;
+}
+
+.experience__content--body .description .duration span {
+  margin: auto 10px;
+}
+
+.experience__content--body .description ul li {
+  list-style: url(./../../assets/images/code.png);
+  margin-left: 20px;
+  padding: 10px;
+  opacity: 0.7;
+}
+
+.projects {
+  margin: 50px auto 0px;
+}
+
+.projects > * {
+  padding: 10px;
 }
 
 @media (min-width: 40rem) {
-  .projects__section {
+  .projects {
     width: 90%;
-    margin: 200px auto;
+    margin: 200px auto 0px;
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: row !important;
             flex-direction: row !important;
   }
-  .projects__section > * {
+  .projects > * {
     padding: 20px;
     margin: auto;
   }
 }
 
-.projects__section .content .head {
-  width: 100%;
-  margin: auto;
-  border: 1px solid red;
+.projects .content {
+  position: relative;
 }
 
-.projects__section .content .head a {
+.projects .content .head {
+  width: 100%;
+  margin: 0px auto 40px;
+}
+
+.projects .content .head a {
   margin: 10px 0;
 }
 
-.projects__section .content .head .fa {
+.projects .content .head .fa {
   margin-right: 10px;
 }
 
-.projects__section .content .head .horizontal-line {
-  width: 40%;
+.projects .content .head .horizontal-line {
+  width: 30%;
   height: 2px;
   margin-left: 10px;
   opacity: 0.7;
   border: 1px solid honeydew;
+}
+
+.projects .content__body {
+  margin: 50px auto;
+}
+
+.projects .content__body p {
+  color: white;
+  z-index: 2;
+}
+
+@media (min-width: 40rem) {
+  .projects .content__body p {
+    padding: 10px;
+    background: #172a45;
+    border-radius: 5px;
+  }
+  .projects .content__body p.first,
+  .projects .content__body p.third {
+    margin-left: -100px;
+  }
+  .projects .content__body p.second {
+    margin-right: -100px;
+  }
+}
+
+@media (max-width: 39.9375rem) {
+  .projects .content__body {
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    background-image: url(./../../assets/images/gitostats_screenshot.png);
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: overlay;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.projects .content__body h3 {
+  color: #7ee081;
+  font-size: 20px;
+}
+
+.projects .content__body h4 {
+  font-size: 25px;
+}
+
+.projects .content__body a {
+  margin: auto 10px;
+}
+
+.projects .content__body--image img {
+  opacity: 0.5;
+  border-radius: 5px;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+}
+
+.projects .content__body--image img:hover {
+  opacity: 1;
+}
+
+.projects .content__body--description {
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  width: 90%;
+  min-width: 250px;
+}
+
+.projects .content__body--description > * {
+  margin-bottom: 15px;
+}
+
+.projects .content__body--description .links {
+  margin-top: 20px;
+}
+
+.projects-cards {
+  margin: 0px auto;
+}
+
+.projects-cards > * {
+  padding: 10px;
+}
+
+@media (min-width: 40rem) {
+  .projects-cards {
+    width: 90%;
+    margin: 0 auto 100px;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
+  .projects-cards > * {
+    padding: 20px;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.projects-cards .content__head {
+  width: 100%;
+}
+
+.projects-cards .content__head a {
+  margin: 10px 0;
+}
+
+.projects-cards .content__body .card {
+  height: 270px;
+  padding: 10px;
+  margin: 1px;
+  background: #172a45;
+  border-radius: 5px;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.projects-cards .content__body .card:hover {
+  margin-top: -5px;
+}
+
+@media (min-width: 64rem) {
+  .projects-cards .content__body .card {
+    width: 31%;
+  }
+}
+
+@media (max-width: 63.9375rem) {
+  .projects-cards .content__body .card {
+    width: 48%;
+  }
+}
+
+@media (max-width: 26.875rem) {
+  .projects-cards .content__body .card {
+    width: 90%;
+  }
+}
+
+.projects-cards .content__body .card-head a {
+  margin: auto 5px;
+}
+
+.projects-cards .content__body .card p {
+  font-weight: lighter;
+}
+
+.projects-cards .content__footer {
+  margin-top: 10px;
 }
 
 .connect__section {
@@ -870,6 +1134,6 @@ body.light textarea {
 footer {
   height: 6.25rem;
   text-align: center;
-  border-top: 1px solid #7ee081;
+  border-top: 1px dashed #7ee081;
 }
 /*# sourceMappingURL=styles.css.map */

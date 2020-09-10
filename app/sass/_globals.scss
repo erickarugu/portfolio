@@ -20,6 +20,12 @@ a:focus {
   color: unset;
   text-decoration: none;
 }
+a{
+  transition: color 300ms ease-in-out;
+}
+a:hover{
+  color: $primaryGreen;
+}
 button,
 button:active,
 button:focus,
@@ -47,7 +53,7 @@ input:focus,
 textarea:focus,
 input:active,
 textarea:active {
-  border: 1px solid $primaryGreen;
+  border: 1px solid $lightDark;
   box-shadow: 0rem 0rem 0.1rem 0.1rem rgba(0, 0, 0, 0.6);
 }
 select:active,
@@ -55,7 +61,7 @@ select:focus {
   border: none;
   outline: none;
 }
-i.fa {
+i.fa:not(.fa-external-link-alt) {
   color: $primaryGreen;
 }
 p {
@@ -74,7 +80,7 @@ h1 {
 
 .img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 body {
   position: relative;
@@ -106,7 +112,7 @@ body {
     input,
     textarea {
       color: $primaryGray;
-      border: 1px solid $primaryWhite;
+      border: 1px solid $lightDark;
     }
   }
 
@@ -157,14 +163,28 @@ body {
   &.jc-se {
     justify-content: space-evenly;
   }
+  &.jc-end {
+    justify-content: flex-end;
+  }
   &.al-c {
     align-items: center;
+  }
+  .al-sf-end {
+    align-self: flex-end;
+  }
+  .al-sf-start {
+    align-self: flex-start;
   }
 }
 
 // visibility
 .hide-for-mobile {
   @include breakpoint-down(medium) {
+    display: none !important;
+  }
+}
+.hide-for-small{
+  @include breakpoint-down(small) {
     display: none !important;
   }
 }

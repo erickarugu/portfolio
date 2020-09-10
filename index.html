@@ -45,8 +45,9 @@
     <header>
       <!-- Nav -->
       <nav class="navbar flex al-c jc-sb">
-        <a href="#" class="navbar__brand" title="Eric Karugu Logo">
-          <img src="./assets/images/logo.png" alt="Eric Karugu Logo" />
+        <a href="#" class="navbar__brand flex al-c jc-sa" title="Eric Karugu Logo">
+          <img src="./assets/images/eric.jpg" alt="Eric Karugu Logo" />
+          EK
         </a>
 
         <!-- Mobile hamburger -->
@@ -144,28 +145,151 @@
       </section>
 
       <!-- The Experience section -->
-      <section class="experience__section">
-        <div class="content">
-          <div class="head flex al-c">
+      <section class="experience">
+        <div class="experience__content">
+          <div class="experience__content--head flex al-c">
             <a href="#" name="Experience">
-              <h2 class="flex"><i class="fa fa-briefcase"></i> Work</h2>
+              <h2 class="flex"><i class="fa fa-briefcase"></i>Work</h2>
             </a>
             <div class="horizontal-line" id="horizontal-line"></div>
+          </div>
+          <div class="experience__content--body flex jc-sa al-c">
+            <div class="nav">
+              <ul>
+                <li class="work-nav-link" onclick="openWork(event, 'Moringa')">Moringa</li>
+                <li class="work-nav-link active" onclick="openWork(event, 'CRA')">CRA</li>
+                <li class="work-nav-link" onclick="openWork(event, 'CodeLn')">CodeLn</li>
+                <li class="work-nav-link" onclick="openWork(event, 'Infinix')">Infinix</li>
+              </ul>
+            </div>
+            <div class="description work-experience" id="Moringa">
+              <h4>Campus Ambassador (Multimedia University)</h4>
+              <div class="duration flex"><span>Feb, 2020 </span>-<span>Present</span></div>
+              <ul>
+                <li>Moringa ipsum dolor sit amet consectetur adipisicing elit. Reiciendis atque quo doloribus ad fuga, obcaecati vel maiores sed, rem nesciunt cum ratione cupiditate non et a. Ipsam amet aut possimus.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsum repudiandae eos optio architecto qui pariatur vel blanditiis sapiente. Nulla quod placeat, animi a quibusdam recusandae perferendis repellat asperiores suscipit.</li>
+                <li>Lorem</li>
+              </ul>
+            </div>
+            <div class="description work-experience" id="CRA">
+              <h4>Technical Intern @Computer Revolution Africa</h4>
+              <div class="duration flex"><span>July, 2019 </span>-<span>Sept, 2019</span></div>
+              <ul>
+                <li>CRA ipsum dolor sit amet consectetur adipisicing elit. Reiciendis atque quo doloribus ad fuga, obcaecati vel maiores sed, rem nesciunt cum ratione cupiditate non et a. Ipsam amet aut possimus.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsum repudiandae eos optio architecto qui pariatur vel blanditiis sapiente. Nulla quod placeat, animi a quibusdam recusandae perferendis repellat asperiores suscipit.</li>
+                <li>Lorem</li>
+              </ul>
+            </div>
+            <div class="description work-experience" id="CodeLn">
+              <h4>CodeLn School Ambassador (Multimedia University)</h4>
+              <div class="duration flex"><span>April, 2019 </span>-<span>Present</span></div>
+              <ul>
+                <li>CodeLn ipsum dolor sit amet consectetur adipisicing elit. Reiciendis atque quo doloribus ad fuga, obcaecati vel maiores sed, rem nesciunt cum ratione cupiditate non et a. Ipsam amet aut possimus.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsum repudiandae eos optio architecto qui pariatur vel blanditiis sapiente. Nulla quod placeat, animi a quibusdam recusandae perferendis repellat asperiores suscipit.</li>
+                <li>Lorem</li>
+              </ul>
+            </div>
+            <div class="description work-experience" id="Infinix">
+              <h4>Campus Ambassador (Multimedia University)</h4>
+              <div class="duration flex"><span>Aug, 2017 </span>-<span>Jan, 2019</span></div>
+              <ul>
+                <li>Infinix ipsum dolor sit amet consectetur adipisicing elit. Reiciendis atque quo doloribus ad fuga, obcaecati vel maiores sed, rem nesciunt cum ratione cupiditate non et a. Ipsam amet aut possimus.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsum repudiandae eos optio architecto qui pariatur vel blanditiis sapiente. Nulla quod placeat, animi a quibusdam recusandae perferendis repellat asperiores suscipit.</li>
+                <li>Lorem</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- The Projects section -->
-      <section class="projects__section">
+      <section class="projects">
         <div class="content">
           <div class="head flex al-c">
             <a href="#" name="Projects">
-              <h2 class="flex"><i class="fa fa-tasks"></i> Projects</h2>
+              <h2 class="flex"><i class="fa fa-tasks"></i> My Recent Projects</h2>
             </a>
             <div class="horizontal-line" id="horizontal-line"></div>
           </div>
+          <!-- first featured project -->
+          <div class="content__body flex jc-c al-c">
+            <div class="content__body--image hide-for-small">
+              <img class="img" src="./assets/images/gitostats_screenshot.png" alt="Gitostats Screenshot" />
+            </div>
+            <div class="content__body--description flex flex-col jc-sa">
+              <h3 class="al-sf-end">Featured Project</h3>
+              <h4 class="al-sf-end">GitoStats</h4>
+              <p class="first">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia commodi, maxime quaerat odit debitis magni tenetur, quae, ab pariatur tempore quod. Accusamus architecto temporibus incidunt sequi assumenda ut facere quod.</p>
+              <div class="technologies flex jc-sa"><span>GitHub API</span><span>Chart.js</span><span>Vanilla JS</span></div>
+              <div class="links flex jc-c">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fa fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- second featured project -->
+          <div class="content__body flex jc-c al-c">
+            <div class="content__body--description flex flex-col jc-sa">
+              <h3 class="al-sf-start">Featured Project</h3>
+              <h4 class="al-sf-start">Portfolio</h4>
+              <p class="second">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia commodi, maxime quaerat odit debitis magni tenetur, quae, ab pariatur tempore quod. Accusamus architecto temporibus incidunt sequi assumenda ut facere quod.</p>
+              <div class="technologies flex jc-sa"><span>REST API</span><span>SCSS</span><span>Vanilla JS</span></div>
+              <div class="links flex jc-c">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fa fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <div class="content__body--image hide-for-small">
+              <img class="img" src="./assets/images/portfolio.png" alt="Gitostats Screenshot" />
+            </div>
+          </div>
+          <!-- third featured project -->
+          <div class="content__body flex jc-c al-c">
+            <div class="content__body--image hide-for-small">
+              <img class="img" src="./assets/images/gitostats_screenshot.png" alt="Gitostats Screenshot" />
+            </div>
+            <div class="content__body--description flex flex-col jc-sa">
+              <h3 class="al-sf-end">Featured Project</h3>
+              <h4 class="al-sf-end">CoviDash</h4>
+              <p class="third">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia commodi, maxime quaerat odit debitis magni tenetur, quae, ab pariatur tempore quod. Accusamus architecto temporibus incidunt sequi assumenda ut facere quod.</p>
+              <div class="technologies flex jc-sa"><span>GitHub API</span><span>Chart.js</span><span>Vanilla JS</span></div>
+              <div class="links flex jc-c">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fa fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+
+       <!-- The Projects-cards section -->
+       <section class="projects-cards">
+        <div class="content">
+          <div class="content__head flex flex-col al-c jc-c">
+              <h2 class="flex">Other Notable Projects</h2>
+              <a href="#" class="text__highlight" title="Visit Archive">View a Curated List</a>
+          </div>
+          <div class="content__body flex flex-wrap jc-sb">
+           <div class="card flex flex-col jc-sb">
+             <div class="card-head flex jc-end">
+                <a href="#" title="GitHub repo"><i class="fab fa-github"></i></a>
+                <a href="#" title="Visit Link"><i class="fa fa-external-link-alt"></i></a>
+             </div>
+             <div class="card-body">
+               <h3>Open GitHub</h3>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quaerat voluptatum iste numquam possimus soluta magni nulla sapiente fugit consequatur.</p>
+             </div>
+             <div class="card-footer technologies flex jc-sa"><span>GitHub API</span><span>Chart.js</span><span>Vanilla JS</span></div>
+           </div>
+           <div class="card">2</div>
+           <div class="card">3</div>
+           <div class="card">3</div>
+          </div>
+          <div class="content__footer flex jc-c">
+            <button class="btn btn-primary">Show More</button>
+          </div>
+        </div>
+        </section>
 
       <!-- The Connect section -->
       <section class="connect__section">
