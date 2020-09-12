@@ -6,7 +6,7 @@
   }
   @include breakpoint-up(medium) {
     width: 90%;
-    margin: 200px auto;
+    margin: 100px auto;
     flex-direction: row !important;
 
     > * {
@@ -44,8 +44,14 @@
   .about__image {
     position: relative;
     @include breakpoint-down(medium) {
-      width: 95%;
+      width: 70%;
     }
+    @include breakpoint-up(medium) {
+      .img{
+        max-width: 300px;
+      }
+    }
+    
 
     &:hover {
       .overlay {
@@ -57,7 +63,7 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      top: 0;
+      top: -4px;
       left: 0;
       border: 1px dotted $primaryGreen;
       border-radius: 5px;

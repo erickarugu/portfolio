@@ -6,7 +6,7 @@
   }
   @include breakpoint-up(medium) {
     width: 90%;
-    margin: 200px auto;
+    margin: 100px auto;
     flex-direction: row !important;
 
     > * {

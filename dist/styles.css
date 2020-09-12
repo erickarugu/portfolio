@@ -681,7 +681,7 @@ body.light textarea {
 @media (min-width: 40rem) {
   .about__section {
     width: 90%;
-    margin: 200px auto;
+    margin: 100px auto;
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: row !important;
@@ -727,7 +727,13 @@ body.light textarea {
 
 @media (max-width: 63.9375rem) {
   .about__section .about__image {
-    width: 95%;
+    width: 70%;
+  }
+}
+
+@media (min-width: 40rem) {
+  .about__section .about__image .img {
+    max-width: 300px;
   }
 }
 
@@ -739,7 +745,7 @@ body.light textarea {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0;
+  top: -4px;
   left: 0;
   border: 1px dotted #7ee081;
   border-radius: 5px;
@@ -755,7 +761,7 @@ body.light textarea {
 @media (min-width: 40rem) {
   .experience {
     width: 90%;
-    margin: 200px auto;
+    margin: 100px auto;
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: row !important;
@@ -875,7 +881,7 @@ body.light textarea {
 @media (min-width: 40rem) {
   .projects {
     width: 90%;
-    margin: 200px auto 0px;
+    margin: 100px auto 0px;
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: row !important;
@@ -941,11 +947,19 @@ body.light textarea {
     border-radius: 5px;
     padding: 10px;
     color: white;
-    background-image: url(./../../assets/images/gitostats_screenshot.png);
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     background-blend-mode: overlay;
     background-position: center;
     background-size: cover;
+  }
+  .projects .content__body.gitostats {
+    background-image: url(./../../assets/images/gitostats_screenshot.png);
+  }
+  .projects .content__body.complimentr {
+    background-image: url(./../../assets/images/complimentr_screenshot.png);
+  }
+  .projects .content__body.covidash {
+    background-image: url(./../../assets/images/covidash_screenshot.png);
   }
 }
 
@@ -1024,7 +1038,7 @@ body.light textarea {
 .projects-cards .content__body .card {
   height: 270px;
   padding: 10px;
-  margin: 1px;
+  margin: 1%;
   background: #172a45;
   border-radius: 5px;
   -webkit-transition: all 300ms ease-in-out;
@@ -1032,12 +1046,12 @@ body.light textarea {
 }
 
 .projects-cards .content__body .card:hover {
-  margin-top: -5px;
+  margin-top: -1px;
 }
 
 @media (min-width: 64rem) {
   .projects-cards .content__body .card {
-    width: 31%;
+    width: 30%;
   }
 }
 
@@ -1076,7 +1090,7 @@ body.light textarea {
 @media (min-width: 40rem) {
   .connect__section {
     width: 90%;
-    margin: 200px auto;
+    margin: 100px auto;
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: row !important;

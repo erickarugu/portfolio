@@ -7,7 +7,7 @@
   }
   @include breakpoint-up(medium) {
     width: 90%;
-    margin: 200px auto 0px;
+    margin: 100px auto 0px;
     flex-direction: row !important;
           // border: 1px solid red;
 
@@ -68,11 +68,19 @@
         border-radius: 5px;
         padding: 10px;
         color: $primaryWhite;
-        background-image: url(./../../assets/images/gitostats_screenshot.png);
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.8);
         background-blend-mode: overlay;
         background-position: center;
         background-size: cover;
+        &.gitostats{
+          background-image: url(./../../assets/images/gitostats_screenshot.png);
+        }
+        &.complimentr{
+          background-image: url(./../../assets/images/complimentr_screenshot.png);
+        }
+        &.covidash{
+          background-image: url(./../../assets/images/covidash_screenshot.png);
+        }
       }
 
       h3 {
