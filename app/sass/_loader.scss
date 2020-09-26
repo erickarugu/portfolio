@@ -1,0 +1,75 @@
+/* MESH LOADER */
+.loader {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: $primaryDark;
+  z-index: 999;
+  overflow: hidden;
+
+  &.hidden{
+    animation: fade-out 300ms ease-in-out forwards;
+    animation-delay: 500ms;
+  }
+
+  .mesh-loader {
+    overflow: hidden;
+    height: inherit;
+    width: inherit;
+
+    .circle {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      background: $primaryGreen;
+      border-radius: 50%;
+      margin: -15px;
+      animation: mesh 3s ease-in-out infinite -1.5s;
+    }
+
+    > div .circle:last-child {
+      animation-delay: 0s;
+    }
+
+    > div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+
+    > div:last-child {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+@keyframes mesh {
+  0% {
+    transform-origin: 50% -100%;
+    transform: rotate(0);
+  }
+  50% {
+    transform-origin: 50% -100%;
+    transform: rotate(360deg);
+  }
+  50.1% {
+    transform-origin: 50% 200%;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform-origin: 50% 200%;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade-out{
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: .5;
+  }
+  100%{
+    opacity: 0;
+  }
+}

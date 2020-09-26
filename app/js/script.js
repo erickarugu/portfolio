@@ -10,17 +10,17 @@ const openWork = (evt, place) => {
   }
   document.getElementById(place).style.display = "block";
   evt.currentTarget.className += " active";
-}
+};
 
-const fetchProjects = async(cardsList)=>{
-await fetch('projects.json')
-.then(data => data.json())
-.then(data => renderProjectsCards(data, cardsList))
-.catch(err => console.log(err))
-}
+const fetchProjects = async (cardsList) => {
+  await fetch("projects.json")
+    .then((data) => data.json())
+    .then((data) => renderProjectsCards(data, cardsList))
+    .catch((err) => console.log(err));
+};
 const renderProjectsCards = (projectsArray, cardsList) => {
-  let str = ""
-  for(key in projectsArray){
+  let str = "";
+  for (key in projectsArray) {
     let card = `
     <div class="card flex flex-col jc-sb">
       <div class="card-head flex jc-end">
@@ -31,14 +31,32 @@ const renderProjectsCards = (projectsArray, cardsList) => {
         <h3>${key}</h3>
         <p>${projectsArray[key].description}</p>
       </div>
-      <div class="card-footer technologies flex jc-sa">${projectsArray[key].tags.map(tag => '<span>'+tag+'</span>').join('')}</div>
+      <div class="card-footer technologies flex jc-sa">${projectsArray[key].tags.map((tag) => "<span>" + tag + "</span>").join("")}</div>
     </div>
-    `
+    `;
     str += card;
   }
   cardsList.innerHTML = str;
-}
+};
 
+const hideLoader = () => {
+  const loader = document.querySelector(".loader");
+  const body = document.body;
+
+  console.log(loader);
+  
+  body.style.overflowY = "scroll";
+  loader.classList.add("hidden");
+  setTimeout(()=>{
+    loader.style.display = 'none';
+  },1000)
+};
+
+window.onclick = (e) => 
+{
+  e.preventDefault();
+  if(e.target.href)scrollTo(e.target.href.split('#')[1]);
+};
 
 window.onload = () => {
   const themeToggler = document.querySelector("#theme__toggler");
@@ -50,6 +68,7 @@ window.onload = () => {
   const body = document.body;
 
   fetchProjects(cardsList);
+  hideLoader();
 
   themeToggler.addEventListener("click", (e) => {
     if (body.classList.contains("dark")) {

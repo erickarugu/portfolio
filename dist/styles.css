@@ -199,6 +199,7 @@ p {
   opacity: 0.7;
   font-size: 1.25rem;
   margin: 10px 0;
+  font-weight: lighter;
 }
 
 ul {
@@ -228,6 +229,7 @@ body {
   background: honeydew;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
+  overflow: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -408,6 +410,134 @@ body.light textarea {
   border: 0.1rem solid honeydew;
 }
 
+/* MESH LOADER */
+.loader {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: #0a192f;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.loader.hidden {
+  -webkit-animation: fade-out 300ms ease-in-out forwards;
+          animation: fade-out 300ms ease-in-out forwards;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+
+.loader .mesh-loader {
+  overflow: hidden;
+  height: inherit;
+  width: inherit;
+}
+
+.loader .mesh-loader .circle {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #7ee081;
+  border-radius: 50%;
+  margin: -15px;
+  -webkit-animation: mesh 3s ease-in-out infinite -1.5s;
+          animation: mesh 3s ease-in-out infinite -1.5s;
+}
+
+.loader .mesh-loader > div .circle:last-child {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.loader .mesh-loader > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.loader .mesh-loader > div:last-child {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+@-webkit-keyframes mesh {
+  0% {
+    -webkit-transform-origin: 50% -100%;
+            transform-origin: 50% -100%;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  50% {
+    -webkit-transform-origin: 50% -100%;
+            transform-origin: 50% -100%;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  50.1% {
+    -webkit-transform-origin: 50% 200%;
+            transform-origin: 50% 200%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform-origin: 50% 200%;
+            transform-origin: 50% 200%;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes mesh {
+  0% {
+    -webkit-transform-origin: 50% -100%;
+            transform-origin: 50% -100%;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  50% {
+    -webkit-transform-origin: 50% -100%;
+            transform-origin: 50% -100%;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  50.1% {
+    -webkit-transform-origin: 50% 200%;
+            transform-origin: 50% 200%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform-origin: 50% 200%;
+            transform-origin: 50% 200%;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .socials,
 .email {
   position: fixed;
@@ -444,13 +574,21 @@ body.light textarea {
           transform: rotate(90deg);
 }
 
-.navbar {
+header {
   position: relative;
+  z-index: 2;
+}
+
+.navbar {
   width: 100%;
   height: 10vh;
   font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
   -webkit-box-shadow: rgba(2, 12, 27, 0.7) 0rem 0.625rem 1.875rem -0.625rem;
           box-shadow: rgba(2, 12, 27, 0.7) 0rem 0.625rem 1.875rem -0.625rem;
+}
+
+.navbar.sticky {
+  position: fixed;
 }
 
 .navbar__brand {
@@ -461,7 +599,7 @@ body.light textarea {
 .navbar__brand img {
   height: 2.5rem;
   border-radius: 50%;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 .navbar__hamburger {
@@ -545,12 +683,13 @@ body.light textarea {
   right: 0;
   bottom: 0;
   left: 40%;
+  min-height: 100vh;
   padding: 6rem 0;
   color: honeydew;
   background: #172a45;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
-  z-index: 2;
+  z-index: 1000;
 }
 
 .navbar__mobile.closed {
@@ -1069,10 +1208,6 @@ body.light textarea {
 
 .projects-cards .content__body .card-head a {
   margin: auto 5px;
-}
-
-.projects-cards .content__body .card p {
-  font-weight: lighter;
 }
 
 .projects-cards .content__footer {

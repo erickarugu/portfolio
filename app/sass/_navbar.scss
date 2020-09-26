@@ -1,18 +1,24 @@
-.navbar {
+header {
   position: relative;
-  width: 100%; 
+  z-index: 2;
+}
+.navbar {
+  width: 100%;
   height: 10vh;
   font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
   box-shadow: rgba(2, 12, 27, 0.7) 0rem 0.625rem 1.875rem -0.625rem;
-
+  
+  &.sticky {
+    position: fixed;
+  }
   &__brand {
     margin-left: 5%;
     color: $primaryGreen;
-    
+
     img {
       height: 2.5rem;
       border-radius: 50%;
-      margin-right: .5rem;
+      margin-right: 0.5rem;
     }
   }
 
@@ -87,11 +93,12 @@
     right: 0;
     bottom: 0;
     left: 40%;
+    min-height: 100vh;
     padding: 6rem 0;
     color: $primaryGray;
     background: $lightDark;
     transition: all 300ms ease-in-out;
-    z-index: 2;
+    z-index: 1000;
 
     &.closed {
       margin-left: 100vh;

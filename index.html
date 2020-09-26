@@ -25,9 +25,24 @@
     <meta name="theme-color" content="#0a192f" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./dist/styles.css" />
   </head>
   <body class="dark">
+    <!-- Loader -->
+    <div class="loader">
+      <div class="mesh-loader">
+        <div class="set-one">
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+        <div class="set-two">
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+
     <!-- 1. Vertical socials linkes -->
     <div class="socials flex flex-col">
       <a href="https://github.com/erickarugu32" title="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
@@ -42,9 +57,9 @@
     </div>
 
     <!-- header section -->
-    <header>
+    <header class="animate__animated animate__fadeInDown animate__delay-2s">
       <!-- Nav -->
-      <nav class="navbar flex al-c jc-sb">
+      <nav class="navbar flex al-c jc-sb sticky">
         <a href="#" class="navbar__brand flex al-c jc-sa" title="Eric Karugu Logo">
           <img src="./assets/images/eric.jpg" alt="Eric Karugu Logo" />
           EK
@@ -64,19 +79,19 @@
         <ul class="navbar__nav navbar__desktop flex jc-c al-c hide-for-mobile">
           <li class="navbar__item flex flex-row">
             <i class="fa fa-user"></i>
-            <a href="#Me" title="About Me">About Me</a>
+            <a href="#about" title="About Me">About Me</a>
           </li>
           <li class="navbar__item flex flex-row">
             <i class="fa fa-briefcase"></i>
-            <a href="#Experience" title="Experience">Experience</a>
+            <a href="#experience" title="Experience">Experience</a>
           </li>
           <li class="navbar__item flex flex-row">
             <i class="fa fa-tasks"></i>
-            <a href="#Projects" title="Projects">Projects</a>
+            <a href="#projects" title="Projects">Projects</a>
           </li>
           <li class="navbar__item flex flex-row">
             <i class="fa fa-users"></i>
-            <a href="#Contact" title="Contacts">Connect</a>
+            <a href="#connect" title="Connect">Connect</a>
           </li>
           <a href="./resume.pdf" class="resume flex al-c jc-c btn btn-primary" title="View my CV">Resume</a>
         </ul>
@@ -84,10 +99,10 @@
         <!-- Side navbar in mobile devices -->
         <div class="navbar__nav navbar__mobile flex flex-col al-c jc-sa hide-for-desktop closed" id="navbar__mobile">
           <div class="close" id="close__aside"><i class="fa fa-2x fa-times"></i></div>
-          <a href="#Me" class="flex flex-col al-c" title="About Me"><i class="fa fa-user"></i>About Me</a>
-          <a href="#Experience" class="flex flex-col al-c" title="Work"><i class="fa fa-briefcase"></i>Experience</a>
-          <a href="#Projects" class="flex flex-col al-c" title="Projects"><i class="fa fa-tasks"></i>Projects</a>
-          <a href="#Contact" class="flex flex-col al-c" title="Contact"><i class="fa fa-envelope"></i>Contact</a>
+          <a href="#about" class="flex flex-col al-c" title="About Me"><i class="fa fa-user"></i>About Me</a>
+          <a href="#experience" class="flex flex-col al-c" title="Work"><i class="fa fa-briefcase"></i>Experience</a>
+          <a href="#projects" class="flex flex-col al-c" title="Projects"><i class="fa fa-tasks"></i>Projects</a>
+          <a href="#connect" class="flex flex-col al-c" title="Contact"><i class="fa fa-envelope"></i>Contact</a>
           <a href="./resume.pdf" class="resume flex jc-c al-c btn btn-primary" title="View my CV">Resume</a>
         </div>
       </nav>
@@ -97,7 +112,7 @@
     <!-- The Main -->
     <main>
       <!-- Top hero section -->
-      <section class="hero__section flex flex-row al-c">
+      <section class="hero__section flex flex-row al-c animate__animated animate__fadeInUp animate__delay-2s">
         <!-- 2. The intro section -->
         <div class="intro flex flex-col jc-c">
           <h1>👋 Hi there, my name is</h1>
@@ -113,10 +128,10 @@
       </section>
 
       <!-- About me section -->
-      <section class="about__section flex flex-col jc-sa al-c">
+      <section class="about about__section flex flex-col jc-sa al-c animate__animated animate__fadeInUp animate__delay-2s" id="about">
         <div class="description flex flex-col al-c jc-sa">
           <div class="head flex al-c">
-            <a href="#" name="Me">
+            <a href="#">
               <h2 class="flex"><i class="fa fa-user"></i> About</h2>
             </a>
             <div class="horizontal-line" id="horizontal-line"></div>
@@ -157,7 +172,7 @@
       <section class="experience">
         <div class="experience__content">
           <div class="experience__content--head flex al-c">
-            <a href="#" name="Experience">
+            <a href="#">
               <h2 class="flex"><i class="fa fa-briefcase"></i>Work</h2>
             </a>
             <div class="horizontal-line" id="horizontal-line"></div>
@@ -215,7 +230,7 @@
       <section class="projects">
         <div class="content">
           <div class="head flex al-c">
-            <a href="#" name="Projects">
+            <a href="#">
               <h2 class="flex"><i class="fa fa-tasks"></i> My Recent Projects</h2>
             </a>
             <div class="horizontal-line" id="horizontal-line"></div>
@@ -271,22 +286,22 @@
         </div>
       </section>
 
-       <!-- The Projects-cards section -->
-       <section class="projects-cards">
+      <!-- The Projects-cards section -->
+      <section class="projects-cards">
         <div class="content">
           <div class="content__head flex flex-col al-c jc-c">
-              <h2 class="flex">Other Notable Projects</h2>
-              <a href="#" class="text__highlight" title="Visit Archive">View a Curated List</a>
+            <h2 class="flex">Other Notable Projects</h2>
+            <a href="#" class="text__highlight" title="Visit Archive">View a Curated List</a>
           </div>
           <div class="content__body flex flex-wrap jc-c" id="cards-list"></div>
           <div class="content__footer flex jc-c">
             <button class="btn btn-primary">Show More</button>
           </div>
         </div>
-        </section>
+      </section>
 
       <!-- The Connect section -->
-      <section class="connect__section">
+      <section class="connect__section connect">
         <div class="content">
           <div class="head flex al-c jc-c">
             <a name="Connect">
@@ -328,7 +343,7 @@
       <p>&copy; 2020</p>
     </footer>
     <!-- End footer -->
-
+    <script src="./app/js/vendor/scrollTrigger.js"></script>
     <script src="./app/js/script.js"></script>
   </body>
 </html>
