@@ -2,17 +2,17 @@
   height: 90vh;
 
   > * {
-    padding: 10px;
+    padding: 0.625rem;
   }
 
   @include breakpoint-up(medium) {
     width: 90%;
     margin: auto;
-    padding: 10px;
+    padding: 0.625rem;
 
     > * {
       min-width: 45%;
-      padding: 20px;
+      padding: 1.25rem;
     }
   }
 
@@ -47,6 +47,11 @@
         margin-bottom: 0.5rem;
         max-width: 31.25rem;
       }
+    }
+    .link{
+      font-size: 1.5625rem;
+      color: $primaryGreen;
+      text-decoration: underline;
     }
   }
 

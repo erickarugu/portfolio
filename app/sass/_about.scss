@@ -1,17 +1,17 @@
 .about__section {
-  margin: 50px auto;
+  margin: 3.125rem auto;
 
   > * {
-    padding: 10px;
+    padding: 0.625rem;
   }
   @include breakpoint-up(medium) {
     width: 90%;
-    margin: 100px auto;
+    margin: 6.25rem auto;
     flex-direction: row !important;
 
     > * {
       max-width: 45%;
-      padding: 20px;
+      padding: 1.25rem;
     }
   }
 
@@ -19,22 +19,22 @@
     .head {
       width: 100%;
       a {
-        margin: 10px 0;
+        margin: 0.625rem 0;
       }
       .fa {
-        margin-right: 10px;
+        margin-right: 0.625rem;
       }
       .horizontal-line {
         width: 60%;
-        height: 2px;
-        margin-left: 10px;
+        height: 0.125rem;
+        margin-left: 0.625rem;
         opacity: 0.7;
-        border: 1px solid $primaryGray;
+        border: 0.0625rem solid $primaryGray;
       }
     }
 
     .list {
-      width: 90%;
+      width: 100%;
       ul li {
         list-style: url(./../../assets/images/code.png);
       }
@@ -47,11 +47,10 @@
       width: 70%;
     }
     @include breakpoint-up(medium) {
-      .img{
-        max-width: 300px;
+      .img {
+        max-width: 18.75rem;
       }
     }
-    
 
     &:hover {
       .overlay {
@@ -63,10 +62,10 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      top: -4px;
+      top: -0.25rem;
       left: 0;
-      border: 1px dotted $primaryGreen;
-      border-radius: 5px;
+      border: 0.0625rem dotted $primaryGreen;
+      border-radius: 0.3125rem;
       background: rgba(0, 0, 0, 0.3);
       transition: background 300ms ease-in-out;
     }
