@@ -1,18 +1,16 @@
 .projects-cards {
-  margin: 0px auto;
-//   border: 1px solid red;
+  margin: 0 auto;
 
   > * {
-    padding: 10px;
-    // border: 1px solid red;
+    padding: 0.625rem;
   }
   @include breakpoint-up(medium) {
     width: 90%;
-    margin: 0 auto 100px;
+    margin: 0 auto 6.25rem;
     flex-direction: row !important;
 
     > * {
-      padding: 20px;
+      padding: 1.25rem;
       width: 100%;
       margin: auto;
     }
@@ -22,19 +20,19 @@
     &__head {
       width: 100%;
       a {
-        margin: 10px 0;
+        margin: 0.625rem 0;
       }
     }
     &__body {
       .card {
-        height: 270px;
-        padding: 10px;
+        height: 16.875rem;
+        padding: 0.625rem;
         margin: 1%;
         background: $lightDark;
-        border-radius: 5px;
+        border-radius: 0.3125rem;
         transition: all 300ms ease-in-out;
         &:hover {
-          margin-top: -1px;
+          margin-top: -0.0625rem;
         }
         @include breakpoint-up(large) {
           width: 30%;
@@ -45,13 +43,13 @@
         @include breakpoint-down(xsmall) {
           width: 90%;
         }
-        &-head a{
-            margin: auto 5px;
+        &-head a {
+          margin: auto 0.3125rem;
         }
       }
     }
     &__footer {
-      margin-top: 10px;
+      margin-top: 0.625rem;
     }
   }
 }

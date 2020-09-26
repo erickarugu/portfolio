@@ -10,7 +10,7 @@
   }
 
   a {
-    letter-spacing: 1px;
+    letter-spacing: 0.0625rem;
     margin: 0.625rem auto;
     transition: color 300ms ease-in-out;
 
@@ -22,6 +22,6 @@
 .email {
   right: 0;
   margin-right: -2.5rem;
-  margin-bottom: 80px;
+  margin-bottom: 5rem;
   transform: rotate(90deg);
 }

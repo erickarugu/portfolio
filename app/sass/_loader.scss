@@ -7,7 +7,7 @@
   z-index: 999;
   overflow: hidden;
 
-  &.hidden{
+  &.hidden {
     animation: fade-out 300ms ease-in-out forwards;
     animation-delay: 500ms;
   }
@@ -18,12 +18,12 @@
     width: inherit;
 
     .circle {
-      width: 30px;
-      height: 30px;
+      width: 1.875rem;
+      height: 1.875rem;
       position: absolute;
       background: $primaryGreen;
       border-radius: 50%;
-      margin: -15px;
+      margin: -0.9375rem;
       animation: mesh 3s ease-in-out infinite -1.5s;
     }
 
@@ -62,14 +62,14 @@
   }
 }
 
-@keyframes fade-out{
-  0%{
+@keyframes fade-out {
+  0% {
     opacity: 1;
   }
-  50%{
-    opacity: .5;
+  50% {
+    opacity: 0.5;
   }
-  100%{
+  100% {
     opacity: 0;
   }
 }

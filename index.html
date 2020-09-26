@@ -57,7 +57,7 @@
     </div>
 
     <!-- header section -->
-    <header class="animate__animated animate__fadeInDown animate__delay-2s">
+    <header class="header sticky animate__animated animate__fadeInDown animate__delay-2s">
       <!-- Nav -->
       <nav class="navbar flex al-c jc-sb sticky">
         <a href="#" class="navbar__brand flex al-c jc-sa" title="Eric Karugu Logo">
@@ -99,11 +99,11 @@
         <!-- Side navbar in mobile devices -->
         <div class="navbar__nav navbar__mobile flex flex-col al-c jc-sa hide-for-desktop closed" id="navbar__mobile">
           <div class="close" id="close__aside"><i class="fa fa-2x fa-times"></i></div>
-          <a href="#about" class="flex flex-col al-c" title="About Me"><i class="fa fa-user"></i>About Me</a>
-          <a href="#experience" class="flex flex-col al-c" title="Work"><i class="fa fa-briefcase"></i>Experience</a>
-          <a href="#projects" class="flex flex-col al-c" title="Projects"><i class="fa fa-tasks"></i>Projects</a>
-          <a href="#connect" class="flex flex-col al-c" title="Contact"><i class="fa fa-envelope"></i>Contact</a>
-          <a href="./resume.pdf" class="resume flex jc-c al-c btn btn-primary" title="View my CV">Resume</a>
+          <a href="#about" class="link flex flex-col al-c" title="About Me"><i class="fa fa-user"></i>About Me</a>
+          <a href="#experience" class="link flex flex-col al-c" title="Work"><i class="fa fa-briefcase"></i>Experience</a>
+          <a href="#projects" class="link flex flex-col al-c" title="Projects"><i class="fa fa-tasks"></i>Projects</a>
+          <a href="#connect" class="link flex flex-col al-c" title="Contact"><i class="fa fa-envelope"></i>Contact</a>
+          <div><a href="./resume.pdf" class="resume flex jc-c al-c btn btn-primary" title="View my CV">Resume</a></div>
         </div>
       </nav>
     </header>
@@ -112,13 +112,14 @@
     <!-- The Main -->
     <main>
       <!-- Top hero section -->
-      <section class="hero__section flex flex-row al-c animate__animated animate__fadeInUp animate__delay-2s">
+      <section class="hero hero__section flex flex-row al-c animate__animated animate__fadeInUp animate__delay-2s" id="hero">
         <!-- 2. The intro section -->
         <div class="intro flex flex-col jc-c">
           <h1>👋 Hi there, my name is</h1>
           <h2 class="name">Eric Karugu.</h2>
           <h2 class="description">I'm a Web Developer.</h2>
           <p>I am currently based in Nairobi, Kenya specializing in building websites, web apps, native apps and everything else relating to the web.</p>
+          <p>I also run <a href="https://deveric.tech" class="link" title="Deveric Site" target="_blank">deveric.tech</a>, a blog site where i write tech related articles whenever I find time.</p>
           <a href="#Connect" class="resume flex jc-c al-c btn btn-primary" title="View my CV">Reach Out</a>
         </div>
         <!-- 3. The laptop section -->
@@ -128,7 +129,7 @@
       </section>
 
       <!-- About me section -->
-      <section class="about about__section flex flex-col jc-sa al-c animate__animated animate__fadeInUp animate__delay-2s" id="about">
+      <section class="about about__section flex flex-col jc-sa al-c" id="about">
         <div class="description flex flex-col al-c jc-sa">
           <div class="head flex al-c">
             <a href="#">
@@ -136,8 +137,10 @@
             </a>
             <div class="horizontal-line" id="horizontal-line"></div>
           </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum doloremque praesentium quod tenetur modi natus perspiciatis et molestiae consectetur dicta nesciunt vero assumenda, necessitatibus minus iure voluptas temporibus fuga voluptate.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum doloremque praesentium quod tenetur modi natus perspiciatis et molestiae consectetur dicta nesciunt vero assumenda, necessitatibus minus iure voluptas temporibus fuga voluptate.</p>
+          <p>Hello! I am Eric, an enthusiastic Software Developer based in Nairobi, Kenya.</p>
+          <p>I adore designing and developing stuff related to the web, from websites to native apps. My ultimate goal is to build highly perfomant solutions that solve day to day challenges with utmost perfection.</p>
+          <p>I am a 4th year <span class="text__highlight">Computer Science</span> student at <span class="text__highlight">Multimedia University of Kenya</span> hoping to graduate in December, 2020. After which I hope to secure a full time Internship or a junior software Developer role.</p>
+          <p>Below are some of the technolgies I have been working with:</p>
           <div class="list flex jc-se">
             <ul>
               <li>Modern Javascript</li>
@@ -152,15 +155,6 @@
               <li>Firebase</li>
             </ul>
           </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit!</p>
-          <div class="list flex jc-se">
-            <ul>
-              <li>Node.js</li>
-            </ul>
-            <ul>
-              <li>Firebase</li>
-            </ul>
-          </div>
         </div>
         <div class="about__image">
           <div class="overlay" id="overlay"></div>
@@ -169,7 +163,7 @@
       </section>
 
       <!-- The Experience section -->
-      <section class="experience">
+      <section class="experience" id="experience">
         <div class="experience__content">
           <div class="experience__content--head flex al-c">
             <a href="#">
@@ -227,15 +221,15 @@
       </section>
 
       <!-- The Projects section -->
-      <section class="projects">
+      <section class="projects" id="projects">
         <div class="content">
           <div class="head flex al-c">
             <a href="#">
-              <h2 class="flex"><i class="fa fa-tasks"></i> My Recent Projects</h2>
+              <h2 class="flex"><i class="fa fa-tasks"></i>Projects</h2>
             </a>
             <div class="horizontal-line" id="horizontal-line"></div>
           </div>
-          <!-- first featured project -->
+          <!-- First featured project -->
           <div class="content__body gitostats flex jc-c al-c">
             <div class="content__body--image hide-for-small">
               <img class="img" src="./assets/images/gitostats_screenshot.png" alt="Gitostats Screenshot" />
@@ -243,31 +237,31 @@
             <div class="content__body--description flex flex-col jc-sa">
               <h3 class="al-sf-end">Featured Project</h3>
               <h4 class="al-sf-end">GitoStats</h4>
-              <p class="first">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia commodi, maxime quaerat odit debitis magni tenetur, quae, ab pariatur tempore quod. Accusamus architecto temporibus incidunt sequi assumenda ut facere quod.</p>
+              <p class="first" id="card">A single page progressive app to summarize GitHub stats with beautiful charts, top repositories with various sorting options plus other relevant information. Requires one to input their GitHub username only. No authentication required.</p>
               <div class="technologies flex jc-sa"><span>GitHub API</span><span>Chart.js</span><span>Vanilla JS</span></div>
               <div class="links flex jc-c">
-                <a href="https://github.com/erickarugu32/gitostats"><i class="fab fa-github"></i></a>
-                <a href="https://gitostats.vercel.app"><i class="fa fa-external-link-alt"></i></a>
+                <a href="https://github.com/erickarugu32/gitostats" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://gitostats.vercel.app" target="_blank"><i class="fa fa-external-link-alt"></i></a>
               </div>
             </div>
           </div>
-          <!-- second featured project -->
+          <!-- Second featured project -->
           <div class="content__body complimentr flex jc-c al-c">
             <div class="content__body--description flex flex-col jc-sa">
               <h3 class="al-sf-start">Featured Project</h3>
               <h4 class="al-sf-start">Complimentr</h4>
-              <p class="second">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia commodi, maxime quaerat odit debitis magni tenetur, quae, ab pariatur tempore quod. Accusamus architecto temporibus incidunt sequi assumenda ut facere quod.</p>
+              <p class="second" id="card">An online platform I created for my class that allows us to compliment each other anonymously. Users can edit or delete their posts and view all posts posted on the wall at any given time.</p>
               <div class="technologies flex jc-sa"><span>Bulma.io</span><span>Firebase</span><span>Angular 9</span></div>
               <div class="links flex jc-c">
-                <a href="https://github.com/erickarugu32/complimentr"><i class="fab fa-github"></i></a>
-                <a href="https://complimentr-ke.web.app"><i class="fa fa-external-link-alt"></i></a>
+                <a href="https://github.com/erickarugu32/complimentr" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://complimentr-ke.web.app" target="_blank"><i class="fa fa-external-link-alt"></i></a>
               </div>
             </div>
             <div class="content__body--image hide-for-small">
               <img class="img" src="./assets/images/complimentr_screenshot.png" alt="Complimentr Screenshot" />
             </div>
           </div>
-          <!-- third featured project -->
+          <!-- Third featured project -->
           <div class="content__body covidash flex jc-c al-c">
             <div class="content__body--image hide-for-small">
               <img class="img" src="./assets/images/covidash_screenshot.png" alt="Gitostats Screenshot" />
@@ -275,11 +269,11 @@
             <div class="content__body--description flex flex-col jc-sa">
               <h3 class="al-sf-end">Featured Project</h3>
               <h4 class="al-sf-end">CoviDash</h4>
-              <p class="third">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia commodi, maxime quaerat odit debitis magni tenetur, quae, ab pariatur tempore quod. Accusamus architecto temporibus incidunt sequi assumenda ut facere quod.</p>
+              <p class="third" id="card">A super fast, single page website dashboard that displays updated COVID-19 world data by country in a nicely formatted table with search and filter options ultilizing the coronavirus data from an external API.</p>
               <div class="technologies flex jc-sa"><span>GitHub API</span><span>Chart.js</span><span>Vanilla JS</span></div>
               <div class="links flex jc-c">
-                <a href="https://github.com/erickarugu32/Covid-Data"><i class="fab fa-github"></i></a>
-                <a href="https://covidash.now.sh"><i class="fa fa-external-link-alt"></i></a>
+                <a href="https://github.com/erickarugu32/Covid-Data" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://covidash.now.sh" target="_blank"><i class="fa fa-external-link-alt"></i></a>
               </div>
             </div>
           </div>
@@ -287,7 +281,7 @@
       </section>
 
       <!-- The Projects-cards section -->
-      <section class="projects-cards">
+      <section class="projects-cards" id="projects-cards">
         <div class="content">
           <div class="content__head flex flex-col al-c jc-c">
             <h2 class="flex">Other Notable Projects</h2>
@@ -295,13 +289,13 @@
           </div>
           <div class="content__body flex flex-wrap jc-c" id="cards-list"></div>
           <div class="content__footer flex jc-c">
-            <button class="btn btn-primary">Show More</button>
+            <!-- <button class="btn btn-primary">Show More</button> -->
           </div>
         </div>
       </section>
 
       <!-- The Connect section -->
-      <section class="connect__section connect">
+      <section class="connect__section connect" id="connect">
         <div class="content">
           <div class="head flex al-c jc-c">
             <a name="Connect">
@@ -332,6 +326,7 @@
           <a href="https://www.linkedin.com/in/eric-karugu-904569145/" title="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-2x fa-linkedin"></i></a>
           <a href="https://twitter.com/karugu_eric" title="Twitter" target="_blank" rel="noopener"><i class="fab fa-2x fa-twitter"></i></a>
           <a href="https://dev.to/erickarugu" title="Dev.to" target="_blank" rel="noopener"><i class="fab fa-2x fa-dev"></i></a>
+          <a href="https://dev.to/erickarugu" title="Dev.to" target="_blank" rel="noopener"><i class="fab fa-2x fa-dribble"></i></a>
         </div>
       </section>
     </main>
@@ -343,7 +338,7 @@
       <p>&copy; 2020</p>
     </footer>
     <!-- End footer -->
-    <script src="./app/js/vendor/scrollTrigger.js"></script>
+    <!-- <script src="./app/js/vendor/scrollTrigger.js"></script> -->
     <script src="./app/js/script.js"></script>
   </body>
 </html>

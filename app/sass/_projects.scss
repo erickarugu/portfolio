@@ -1,19 +1,17 @@
 .projects {
-  margin: 50px auto 0px;
-  // border: 1px solid red;
+  margin: 3.125rem auto 0;
+
   > * {
-    padding: 10px;
-    // border: 1px solid red;
+    padding: 0.625rem;
   }
   @include breakpoint-up(medium) {
     width: 90%;
-    margin: 100px auto 0px;
+    margin: 6.25rem auto 0;
     flex-direction: row !important;
-          // border: 1px solid red;
 
 
     > * {
-      padding: 20px;
+      padding: 1.25rem;
       margin: auto;
     }
   }
@@ -23,50 +21,47 @@
 
     .head {
       width: 100%;
-      margin: 0px auto 40px;
-      // border: 1px solid red;
+      margin: 0 auto 2.5rem;
 
       a {
-        margin: 10px 0;
+        margin: 0.625rem 0;
       }
       .fa {
-        margin-right: 10px;
+        margin-right: 0.625rem;
       }
 
       .horizontal-line {
         width: 30%;
-        height: 2px;
-        margin-left: 10px;
+        height: 0.125rem;
+        margin-left: 0.625rem;
         opacity: 0.7;
-        border: 1px solid $primaryGray;
+        border: 0.0625rem solid $primaryGray;
       }
     }
     &__body {
-      // border: 1px solid red;
-      margin: 50px auto;
+      margin: 3.125rem auto;
+
       p {
-        color: $primaryWhite;
         z-index: 2;
       }
 
       @include breakpoint-up(medium) {
         p {
-          // border: 1px solid red;
-          padding: 10px;
+          padding: 0.625rem;
           background: $lightDark;
-          border-radius: 5px;
+          border-radius: 0.3125rem;
         }
         p.first,
         p.third {
-          margin-left: -100px;
+          margin-left: -6.25rem;
         }
         p.second {
-          margin-right: -100px;
+          margin-right: -6.25rem;
         }
       }
       @include breakpoint-down(small) {
-        border-radius: 5px;
-        padding: 10px;
+        border-radius: 0.3125rem;
+        padding: 0.625rem;
         color: $primaryWhite;
         background-color: rgba(0, 0, 0, 0.8);
         background-blend-mode: overlay;
@@ -85,19 +80,18 @@
 
       h3 {
         color: $primaryGreen;
-        font-size: 20px;
+        font-size: 1.25rem;
       }
       h4 {
-        font-size: 25px;
+        font-size: 1.5625rem;
       }
       a {
-        margin: auto 10px;
+        margin: auto 0.625rem;
       }
 
       &--image img {
-        // border: 1px solid red;
         opacity: 0.5;
-        border-radius: 5px;
+        border-radius: 0.3125rem;
         transition: opacity 300ms ease-in-out;
 
         &:hover{
@@ -106,15 +100,14 @@
       }
       &--description {
         align-self: stretch;
-        // border: 1px solid red;
         width: 90%;
-        min-width: 250px;
+        min-width: 15.625rem;
         
         >*{
-          margin-bottom: 15px;
+          margin-bottom: 0.9375rem;
         }
         .links{
-          margin-top: 20px;
+          margin-top: 1.25rem;
         }
       }
     }

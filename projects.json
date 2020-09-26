@@ -1,38 +1,35 @@
 {
-  "Weather App": {
-    "github_url": "https://github.com",
-    "live": "https://github.com",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quaerat voluptatum iste numquam possimus soluta magni nulla sapiente fugit consequatur.",
-    "tags": ["firebase", "angular"]
+  "Deveric.tech": {
+    "github_url": "https://github.com/erickarugu32/deveric1.0",
+    "live": "https://github..techcom",
+    "description": "A blog platform where I write technology related articles whenever I can. Designed and delevoped using 11ty static site generator. Hosted on Netlify.",
+    "tags": ["Node.js", "11ty"]
   },
-  "Data App": {
-    "github_url": "https://github.com",
-    "live": "https://github.com",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quaerat voluptatum iste numquam possimus soluta magni nulla sapiente fugit consequatur.",
-    "tags": ["bulma", "angular", "firebase"]
+  "Stories App": {
+    "github_url": "https://github.com/erickarugu32/digistories",
+    "live": "https://digistories.heroku.app",
+    "description": "A minimal web app that allows users to share stories publicly or make them private for their use only once they have logged in using Google.",
+    "tags": ["Node.js", "Material UI", "Google Cloud"]
   },
-  "New App": {
+  "To Let": {
     "github_url": "https://github.com",
-    "live": "https://github.com",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quaerat voluptatum iste numquam possimus soluta magni nulla sapiente fugit consequatur.",
-    "tags": ["firebase", "angular"]
+    "live": "https://to-let.app",
+    "description": "A social platform to connect potential tenants with future realtors in Nairobi, Kenya.",
+    "tags": ["Firebase", "Angular", "Bootstrap"]
   },
-  "Maybe App": {
-    "github_url": "https://github.com",
-    "live": "https://github.com",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quaerat voluptatum iste numquam possimus soluta magni nulla sapiente fugit consequatur.",
-    "tags": ["firebase", "angular"]
+  "Gandertechs": {
+    "live": "https://gandertechs.co.ke",
+    "description": "Professional Work. A client's Website.",
+    "tags": ["CSS3", "HTML5", "Vanilla JS"]
   },
-  "What App": {
-    "github_url": "https://github.com",
-    "live": "https://github.com",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quaerat voluptatum iste numquam possimus soluta magni nulla sapiente fugit consequatur.",
-    "tags": ["firebase", "angular"]
+  "Fumbo Solutions": {
+    "live": "https://fumbosolutions.co.ke",
+    "description": "Professional Work. A client's Website.",
+    "tags": ["Bootstrap", "Laravel"]
   },
-  "DashBoard": {
-    "github_url": "https://github.com",
-    "live": "https://github.com",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quaerat voluptatum iste numquam possimus soluta magni nulla sapiente fugit consequatur.",
-    "tags": ["firebase", "angular"]
+  "TETLL LTD": {
+    "live": "https://tetll.com",
+    "description": "Professional Work. A client's Website.",
+    "tags": ["Bootstrap", "Angular", "JQuery"]
   }
 }
