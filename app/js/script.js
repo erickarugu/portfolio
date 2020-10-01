@@ -25,7 +25,7 @@ const renderProjectsCards = (projectsArray, cardsList) => {
     <div class="card flex flex-col jc-sb" id="card">
       <div class="card-head flex jc-end">
         <a href='${!!projectsArray[key].github_url ? projectsArray[key].github_url : "#"}' title="GitHub repo" target="_blank">${!!projectsArray[key].github_url ? `<i class="fab fa-github"></i>` : ""}</a>
-        <a href='${!!projectsArray[key].livel ? projectsArray[key].live : "#"}' title="Visit Link" target="_blank">${!!projectsArray[key].live ? `<i class="fa fa-external-link-alt"></i>` : ""}</a>
+        <a href='${!!projectsArray[key].live ? projectsArray[key].live : "#"}' title="Visit Link" target="_blank">${!!projectsArray[key].live ? `<i class="fa fa-external-link-alt"></i>` : ""}</a>
       </div>
       <div class="card-body">
         <a href="${projectsArray[key].live}" target="_blank"><h3>${key}</h3></a>

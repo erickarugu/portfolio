@@ -142,6 +142,11 @@ body {
     #card {
       background: $primaryWhite;
     }
+    @include breakpoint-up(medium) {
+      #card-project {
+        background: $primaryWhite;
+      }
+    }
   }
 }
 

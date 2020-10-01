@@ -291,6 +291,12 @@ body.light #card {
   background: white;
 }
 
+@media (min-width: 40rem) {
+  body.light #card-project {
+    background: white;
+  }
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;

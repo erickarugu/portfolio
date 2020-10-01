@@ -1,19 +1,18 @@
 {
   "Deveric.tech": {
     "github_url": "https://github.com/erickarugu32/deveric1.0",
-    "live": "https://github..techcom",
+    "live": "https://deveric.tech",
     "description": "A blog platform where I write technology related articles whenever I can. Designed and delevoped using 11ty static site generator. Hosted on Netlify.",
     "tags": ["Node.js", "11ty"]
   },
   "Stories App": {
-    "github_url": "https://github.com/erickarugu32/digistories",
-    "live": "https://digistories.heroku.app",
+    "live": "https://digi-stories.herokuapp.com",
     "description": "A minimal web app that allows users to share stories publicly or make them private for their use only once they have logged in using Google.",
     "tags": ["Node.js", "Material UI", "Google Cloud"]
   },
   "To Let": {
-    "github_url": "https://github.com",
-    "live": "https://to-let.app",
+    "github_url": "https://github.com/erickarugu32/to-let",
+    "live": "https://tolet-ke.web.app",
     "description": "A social platform to connect potential tenants with future realtors in Nairobi, Kenya.",
     "tags": ["Firebase", "Angular", "Bootstrap"]
   },
