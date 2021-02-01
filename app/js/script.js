@@ -1,4 +1,4 @@
-const openWork = (evt, place) => {
+const openWork = (e, place) => {
   var i, x, tablinks;
   x = document.getElementsByClassName("work-experience");
   for (i = 0; i < x.length; i++) {
@@ -9,7 +9,7 @@ const openWork = (evt, place) => {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
   document.getElementById(place).style.display = "block";
-  evt.currentTarget.className += " active";
+  e.currentTarget.className += " active";
 };
 
 const fetchProjects = async (cardsList) => {
@@ -47,7 +47,7 @@ const hideLoader = () => {
   loader.classList.add("hidden");
   setTimeout(() => {
     loader.style.display = "none";
-  }, 1000);
+  }, 500);
 };
 
 window.onload = () => {
@@ -55,6 +55,11 @@ window.onload = () => {
   const closeAside = document.querySelector("#close__aside");
   const aside = document.querySelector("#navbar__mobile");
   const navbarHamburger = document.querySelector(".navbar__hamburger");
+
+  const year = document.querySelector("#copy-date");
+  const now = new Date();
+  year.innerText = now.getFullYear();
+
 
   const cardsList = document.querySelector("#cards-list");
   const body = document.body;
@@ -142,8 +147,9 @@ window.onload = () => {
     });
   });
 
+
   if ("serviceWorker" in navigator) {
-    // register service worker
+    // register service worker in browser
     navigator.serviceWorker.register("/service-worker.js");
   }
 };
